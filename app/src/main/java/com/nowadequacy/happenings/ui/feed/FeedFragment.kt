@@ -31,10 +31,6 @@ class FeedFragment @Inject constructor(
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentFeedBinding.bind(view)
         setupFeedRecyclerview()
-        lifecycleScope.launch {
-            viewModel.loadCards().observe(viewLifecycleOwner){
-            }
-        }
     }
 
     private fun setupFeedRecyclerview() {
